@@ -18,7 +18,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/handwriting"
                 android:gravity="center"
-                android:text="Credits"
+                android:text="@string/info_headline"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/headline_first_part_text_size"
                 android:textStyle="bold" />
@@ -26,15 +26,43 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/question_margin_bottom"
+                android:layout_marginBottom="@dimen/credits_margin"
                 android:background="@color/background_color"
                 android:gravity="center"
-                android:onClick="openWebPage"
-                android:paddingLeft="@dimen/question_padding"
-                android:paddingRight="@dimen/question_padding"
+                android:onClick="openWebPage1"
+                android:paddingLeft="@dimen/credits_padding"
+                android:paddingRight="@dimen/credits_padding"
                 android:text="@string/purpose"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/question_text_size"
+                android:textSize="@dimen/credits_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/credits_margin"
+                android:background="@color/background_color"
+                android:gravity="center"
+                android:onClick="openWebPage2"
+                android:paddingLeft="@dimen/credits_padding"
+                android:paddingRight="@dimen/credits_padding"
+                android:text="@string/university"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/credits_university_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color"
+                android:gravity="center"
+                android:onClick="openWebPage3"
+                android:paddingLeft="@dimen/credits_padding"
+                android:paddingRight="@dimen/credits_padding"
+                android:paddingTop="@dimen/credits_padding"
+                android:text="@string/mentor"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/credits_name_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -43,11 +71,10 @@
                 android:background="@color/background_color"
                 android:gravity="center"
                 android:onClick="sendEmail"
-                android:paddingLeft="@dimen/question_padding"
-                android:paddingRight="@dimen/question_padding"
+                android:padding="@dimen/credits_padding"
                 android:text="@string/credits"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/credits_text_size_name"
+                android:textSize="@dimen/credits_name_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -57,6 +84,6 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:onClick="goToMain"
-            android:text="Back" />
+            android:text="@string/back_button" />
     </RelativeLayout>
 </ScrollView>

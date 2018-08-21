@@ -259,9 +259,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openWebPage(View view) {
+    public void openWebPage1(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.scholarship_we_page)));
+        intent.setData(Uri.parse(getString(R.string.college_web_page)));
+        startActivity(intent);
+    }
+
+    public void openWebPage2(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(getString(R.string.university_web_page)));
+        startActivity(intent);
+    }
+
+    public void openWebPage3(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(getString(R.string.mentor_web_page)));
         startActivity(intent);
     }
 }

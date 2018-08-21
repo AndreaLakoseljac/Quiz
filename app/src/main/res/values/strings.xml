@@ -6,13 +6,19 @@
     <string name="headline_second_part">Kviz</string>
     <string name="start_button">Igraj</string>
     <string name="results_button">Rezultati</string>
-    <string name="about_button">Informacije</string>
+    <string name="about_button">Info</string>
     <string name="exit_button">Izlaz</string>
+    <string name="back_button">Nazad</string>
 
-
-
-    <string name="purpose">This application is final project for Google developer Challenge Scholarship: Android Basics - Udacity.</string>
-    <string name="credits">Made by: Andrea Lakošeljac, Croatia</string>
+    <string name="info_headline">Informacije</string>
+    <string name="purpose">Ova aplikacija je izrađena u svrhu diplomskog rada na Odjelu za informatiku (modul: Informacijski i komunikacijski sustavi)</string>
+    <string name="college_web_page">http://www.inf.uniri.hr/hr/</string>
+    <string name="university">Sveučilište u Rijeci</string>
+    <string name="university_web_page">https://www.uniri.hr/</string>
+    <string name="mentor">Mentor: dr.sc. Božidar Kovačić doc.</string>
+    <string name="mentor_web_page">http://portal.uniri.hr/Portfelj/1506</string>
+    <string name="credits">Izradila: univ. bacc. inf. Andrea Lakošeljac</string>
+    <string name="email_address">mailto:andrea.lakoseljac1@gamil.com</string>
 
     <string name="score_textview">Score:</string>
     <string name="submit_answer">Submit</string>
@@ -73,8 +79,6 @@
     <string name="continue_button">Continue</string>
     <string name="question">Question</string>
     <string name="score_on_screen">/</string>
-    <string name="scholarship_we_page">https://www.udacity.com/grow-with-google</string>
-    <string name="email_address">mailto:andrea.lakoseljac1@gamil.com</string>
     <string name="intent_type_email">text/plain</string>
     <string name="positive_toast">Awesome! Your answer is correct!</string>
     <string name="negative_toast">Too bad! Your answer is incorrect!</string>
