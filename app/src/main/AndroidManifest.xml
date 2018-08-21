@@ -19,6 +19,9 @@
         <activity
             android:name=".CreditsActivity"
             android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ResultsActivity"
+            android:parentActivityName=".MainActivity"></activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

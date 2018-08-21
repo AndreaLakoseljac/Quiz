@@ -12,6 +12,7 @@ public class CreditsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.credits_layout);
 
         TextView collegeTextView = (TextView) findViewById(R.id.credits_college_id);

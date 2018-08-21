@@ -67,12 +67,29 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
 
+        Button resultsButton = (Button) findViewById(R.id.results_button_id);
+        resultsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent resultsIntent = new Intent(MainActivity.this, ResultsActivity.class);
+                startActivity(resultsIntent);
+            }
+        });
+
         Button creditsButton = (Button) findViewById(R.id.credits_button_id);
         creditsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent creditsIntent = new Intent(MainActivity.this, CreditsActivity.class);
                 startActivity(creditsIntent);
+            }
+        });
+
+        Button exitButton = (Button) findViewById(R.id.exit_button_id);
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.exit(0);
             }
         });
 
@@ -247,45 +264,5 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
         currentQuestion = 0;
         score = 0;
-    }
-
-    // methods for MAIN layout
-    public void showCredits(View view) {
-        setContentView(R.layout.credits_layout);
-    }
-
-    public void exitFromApp(View view) {
-        System.exit(0);
-    }
-
-    // methods for CREDITS option
-    public void goToMain(View view) {
-        setContentView(R.layout.activity_main);
-    }
-
-    public void sendEmail(View view) {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setType(getString(R.string.intent_type_email));
-        intent.setData(Uri.parse(getString(R.string.email_address)));
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-    public void openWebPage1(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.college_web_page)));
-        startActivity(intent);
-    }
-
-    public void openWebPage2(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.university_web_page)));
-        startActivity(intent);
-    }
-
-    public void openWebPage3(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(getString(R.string.mentor_web_page)));
-        startActivity(intent);
     }
 }

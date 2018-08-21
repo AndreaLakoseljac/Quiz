@@ -63,7 +63,6 @@
                 <Button
                     android:id="@+id/results_button_id"
                     style="@style/ButtonStyle"
-                    android:onClick="showResults"
                     android:text="@string/results_button"
                     android:textSize="@dimen/headline_button_text_size" />
 
@@ -74,8 +73,8 @@
                     android:textSize="@dimen/headline_button_text_size" />
 
                 <Button
+                    android:id="@+id/exit_button_id"
                     style="@style/ButtonStyle"
-                    android:onClick="exitFromApp"
                     android:text="@string/exit_button"
                     android:textSize="@dimen/headline_button_text_size" />
             </LinearLayout>

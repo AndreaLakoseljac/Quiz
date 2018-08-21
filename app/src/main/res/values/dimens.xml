@@ -15,6 +15,11 @@
     <dimen name="credits_margin">15dp</dimen>
     <dimen name="credits_padding">15dp</dimen>
 
+    <dimen name="results_headline_size">40sp</dimen>
+    <dimen name="results_column_name_text_size">30sp</dimen>
+    <dimen name="results_text_size">20sp</dimen>
+    <dimen name="results_margin">20dp</dimen>
+
     <dimen name="button_text_size">25dp</dimen>
     <dimen name="button_margin_bottom">20dp</dimen>
 

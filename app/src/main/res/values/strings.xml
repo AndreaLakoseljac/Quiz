@@ -19,6 +19,8 @@
     <string name="credits">Izradila: univ. bacc. inf. Andrea Lakošeljac</string>
     <string name="email_address">mailto:andrea.lakoseljac1@gamil.com</string>
 
+    <string name="results_headline">Top 5 rezultata</string>
+
     <string name="score_textview">Score:</string>
     <string name="submit_answer">Submit</string>
     <string name="final_win_message">You are the real bookworm!</string>
