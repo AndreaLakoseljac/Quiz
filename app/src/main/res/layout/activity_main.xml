@@ -22,10 +22,10 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/headline_first_part_left_margin"
                 android:layout_marginTop="@dimen/headline_first_part_top_margin"
-                android:fontFamily="@font/handwriting"
+                android:fontFamily="@font/nazeefa"
                 android:text="@string/headline_first_part"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/headline_first_part_text_size"
