@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/BackgroundImage"
+            android:src="@drawable/library" />
+
+        <ImageView
+            android:layout_width="@dimen/trophy_size"
+            android:layout_height="@dimen/trophy_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/trophy_padding_bottom"
+            android:src="@drawable/trophy" />
+
+        <LinearLayout
+            style="@style/LinearLayoutVertical"
+            android:background="@color/background_color">
+
+            <TextView
+                android:id="@+id/final_score_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/final_headline_top_margin"
+                android:fontFamily="@font/handwriting"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/final_headline_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/final_message_padding_bottom"
+                android:text="@string/final_win_message"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/final_message_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutVerticalWrapContent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/question_button_margin_bottom">
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="playQuiz"
+                android:text="@string/play_again_button" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="exitFromApp"
+                android:text="@string/exit_button" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

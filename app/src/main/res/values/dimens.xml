@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="headline_top_margin">30dp</dimen>
+    <dimen name="headline_first_section_left_margin">40dp</dimen>
+    <dimen name="headline_first_section_top_margin">-30dp</dimen>
+    <dimen name="headline_first_section_text_size">55sp</dimen>
+    <dimen name="headline_second_section_left_margin">-70dp</dimen>
+    <dimen name="headline_second_section_text_size">50sp</dimen>
+    <dimen name="button_text_size">30dp</dimen>
+    <dimen name="button_margin_bottom">20dp</dimen>
+    <dimen name="headline_button_text_size">30sp</dimen>
+    <dimen name="answer_text_size">20sp</dimen>
+    <dimen name="checkbox_padding_botton">10dp</dimen>
+    <dimen name="score_padding">15dp</dimen>
+    <dimen name="score_text_size">25sp</dimen>
+    <dimen name="question_padding">15dp</dimen>
+    <dimen name="question_margin_bottom">15dp</dimen>
+    <dimen name="question_text_size">20sp</dimen>
+    <dimen name="credits_text_size_name">30sp</dimen>
+    <dimen name="linear_layout_padding_bottom">20dp</dimen>
+    <dimen name="radiogroup_padding_bottom">30dp</dimen>
+    <dimen name="radiogroup_padding_top">15dp</dimen>
+    <dimen name="question_button_margin_bottom">100dp</dimen>
+    <dimen name="final_headline_top_margin">-30dp</dimen>
+    <dimen name="final_headline_text_size">40sp</dimen>
+    <dimen name="final_message_padding_bottom">15dp</dimen>
+    <dimen name="final_message_text_size">25sp</dimen>
+    <dimen name="edittext_margin_bottom">50dp</dimen>
+    <dimen name="edittext_text_size">22sp</dimen>
+    <dimen name="trophy_size">200dp</dimen>
+    <dimen name="trophy_padding_bottom">40dp</dimen>
+    <dimen name="icon_padding">5dp</dimen>
+</resources>

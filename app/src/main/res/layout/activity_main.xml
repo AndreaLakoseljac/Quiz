@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quiz.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/BackgroundImage"
+            android:src="@drawable/main1" />
+
+        <LinearLayout
+            style="@style/LinearLayoutHorizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/headline_top_margin"
+            android:background="@color/background_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/headline_first_section_left_margin"
+                android:layout_marginTop="@dimen/headline_first_section_top_margin"
+                android:fontFamily="@font/handwriting"
+                android:text="@string/headline_first_section"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/headline_first_section_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/headline_second_section_left_margin"
+                android:gravity="bottom"
+                android:text="@string/headline_second_section"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headline_second_section_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutVertical"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                style="@style/LinearLayoutVerticalWrapContent"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/start_continue_button_id"
+                    style="@style/ButtonStyle"
+                    android:onClick="playQuiz"
+                    android:text="@string/start_button"
+                    android:textSize="@dimen/headline_button_text_size" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="showCredits"
+                    android:text="@string/about_button"
+                    android:textSize="@dimen/headline_button_text_size" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="exitFromApp"
+                    android:text="@string/exit_button"
+                    android:textSize="@dimen/headline_button_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

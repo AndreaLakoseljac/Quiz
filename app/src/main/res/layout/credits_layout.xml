@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            style="@style/BackgroundImage"
+            android:src="@drawable/main1" />
+
+        <LinearLayout style="@style/LinearLayoutVertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/handwriting"
+                android:gravity="center"
+                android:text="Credits"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/headline_first_section_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/question_margin_bottom"
+                android:background="@color/background_color"
+                android:gravity="center"
+                android:onClick="openWebPage"
+                android:paddingLeft="@dimen/question_padding"
+                android:paddingRight="@dimen/question_padding"
+                android:text="@string/purpose"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color"
+                android:gravity="center"
+                android:onClick="sendEmail"
+                android:paddingLeft="@dimen/question_padding"
+                android:paddingRight="@dimen/question_padding"
+                android:text="@string/credits"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/credits_text_size_name"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="goToMain"
+            android:text="Back" />
+    </RelativeLayout>
+</ScrollView>

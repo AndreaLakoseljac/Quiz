@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/BackgroundImage"
+            android:src="@drawable/background" />
+
+        <LinearLayout
+            style="@style/LinearLayoutVertical"
+            android:paddingBottom="@dimen/linear_layout_padding_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/ScoreStyle"
+                    android:text="@string/score_textview" />
+
+                <TextView
+                    android:id="@+id/score_id"
+                    style="@style/ScoreStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayoutVertical"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/question_number_id"
+                    style="@style/ScoreStyle" />
+
+                <TextView
+                    android:id="@+id/question_id"
+                    style="@style/QuestionStyle" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_group_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/question_padding"
+                android:paddingLeft="@dimen/question_padding"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/radiogroup_padding_bottom"
+                android:paddingTop="@dimen/radiogroup_padding_top">
+
+                <RadioButton
+                    android:id="@+id/answer1_id"
+                    style="@style/CheckBoxStyle" />
+
+                <RadioButton
+                    android:id="@+id/answer2_id"
+                    style="@style/CheckBoxStyle" />
+
+                <RadioButton
+                    android:id="@+id/answer3_id"
+                    style="@style/CheckBoxStyle" />
+
+                <RadioButton
+                    android:id="@+id/answer4_id"
+                    style="@style/CheckBoxStyle" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/icon_padding"
+            android:paddingTop="@dimen/icon_padding"
+            android:src="@drawable/book" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/question_button_margin_bottom"
+            android:onClick="submitAnswer"
+            android:text="@string/submit_answer" />
+    </RelativeLayout>
+</ScrollView>
