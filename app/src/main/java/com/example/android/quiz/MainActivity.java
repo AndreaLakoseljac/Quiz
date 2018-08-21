@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -65,6 +66,17 @@ public class MainActivity extends AppCompatActivity {
             mGameState = savedInstanceState.getString(SAVED_INSTANCE_STATE_KEY);
         }
         setContentView(R.layout.activity_main);
+
+        Button creditsButton = (Button) findViewById(R.id.credits_button_id);
+        creditsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent creditsIntent = new Intent(MainActivity.this, CreditsActivity.class);
+                startActivity(creditsIntent);
+            }
+        });
+
+
         quizQuestions = new Question[numberOfQuestions];
         for (int i = 0; i < numberOfQuestions; i++) {
             quizQuestions[i] = new Question();

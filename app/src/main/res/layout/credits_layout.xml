@@ -24,6 +24,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/credits_college_id"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/credits_margin"
@@ -38,6 +39,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/credits_university_id"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/credits_margin"
@@ -52,6 +54,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/credits_mentor_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/background_color"
@@ -66,6 +69,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/credits_author_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/background_color"
@@ -77,13 +81,5 @@
                 android:textSize="@dimen/credits_name_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <Button
-            style="@style/ButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="goToMain"
-            android:text="@string/back_button" />
     </RelativeLayout>
 </ScrollView>

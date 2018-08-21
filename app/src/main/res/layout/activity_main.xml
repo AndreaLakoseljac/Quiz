@@ -68,8 +68,8 @@
                     android:textSize="@dimen/headline_button_text_size" />
 
                 <Button
+                    android:id="@+id/credits_button_id"
                     style="@style/ButtonStyle"
-                    android:onClick="showCredits"
                     android:text="@string/about_button"
                     android:textSize="@dimen/headline_button_text_size" />
 
