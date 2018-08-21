@@ -1,12 +1,19 @@
 <resources>
-    <string name="app_name">Literature Quiz</string>
-    <string name="headline_first_section">Literature</string>
-    <string name="headline_second_section">quiz</string>
+    <string name="app_name">Književnost Kviz</string>
+
+    <!--Naslovni layout-->
+    <string name="headline_first_part">Književnost</string>
+    <string name="headline_second_part">Kviz</string>
+    <string name="start_button">Igraj</string>
+    <string name="results_button">Rezultati</string>
+    <string name="about_button">Informacije</string>
+    <string name="exit_button">Izlaz</string>
+
+
+
     <string name="purpose">This application is final project for Google developer Challenge Scholarship: Android Basics - Udacity.</string>
     <string name="credits">Made by: Andrea Lakošeljac, Croatia</string>
-    <string name="start_button">Start</string>
-    <string name="about_button">About</string>
-    <string name="exit_button">Exit</string>
+
     <string name="score_textview">Score:</string>
     <string name="submit_answer">Submit</string>
     <string name="final_win_message">You are the real bookworm!</string>
