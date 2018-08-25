@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">Književnost Kviz</string>
+    <string name="app_name">Kviz</string>
 
-    <!--Naslovni layout-->
     <string name="headline_first_part">Književnost</string>
     <string name="headline_second_part">Kviz</string>
     <string name="start_button">Igraj</string>
@@ -22,14 +21,26 @@
     <string name="results_headline">Top rezultati</string>
     <string name="empty_view_title_text">Još nema rezultata</string>
     <string name="empty_view_subtitle_text">Započni s igrom kako bi se našao na popisu</string>
+    <string name="intent_type_email">text/plain</string>
+    <string name="result_player_headline">Igrač</string>
+    <string name="result_score_headline">Rezultat</string>
 
-    <string name="score_textview">Score:</string>
-    <string name="submit_answer">Submit</string>
+    <string name="submit_answer">Dalje</string>
+    <string name="question">Pitanje</string>
+    <string name="score_textview">Bodovi:</string>
+    <string name="score_on_screen">/</string>
+    <string name="score_message">%1$d/%2$d</string>
+    <string name="question_number">Pitanje: %1$d/%2$d</string>
+    <string name="positive_toast">Bravo! Točan odgovor!</string>
+    <string name="negative_toast">Nažalost, pogrešan odgovor!</string>
+    <string name="add_answer_toast">Morate unijeti odgovor!</string>
+
+
+
     <string name="final_win_message">You are the real bookworm!</string>
     <string name="play_again_button">Play again</string>
     <string name="final_lose_message">Maybe you should read more.</string>
     <string name="result_message">Your result is </string>
-    <string name="enter_answer">Enter your answer</string>
     <string name="question1">DOSTOJEVSKI - CRIME AND PUNISHMENT: Why does Raskolnikov kill Lizaveta?</string>
     <string name="answer11">He dislikes her</string>
     <string name="answer12">She is trying to prevent him from stealing the pawnbroker\'s money</string>
@@ -80,13 +91,6 @@
     <string name="question9">A DOLL\'S HOUSE: Who wrote this play?</string>
     <string name="true_answer9">Henrik Ibsen</string>
     <string name="continue_button">Continue</string>
-    <string name="question">Question</string>
-    <string name="score_on_screen">/</string>
-    <string name="intent_type_email">text/plain</string>
-    <string name="positive_toast">Awesome! Your answer is correct!</string>
-    <string name="negative_toast">Too bad! Your answer is incorrect!</string>
-    <string name="score_message">%1$d/%2$d</string>
-    <string name="question_number">Question: %1$d/%2$d</string>
-    <string name="congrats_message">Congrats: %.2f%%</string>
     <string name="sorry_message">I\'m sorry: %.2f%%</string>
+    <string name="congrats_message">Congrats: %.2f%%</string>
 </resources>

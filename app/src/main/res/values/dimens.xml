@@ -8,6 +8,7 @@
     <dimen name="headline_second_part_left_margin">-80dp</dimen>
     <dimen name="headline_second_part_text_size">50sp</dimen>
     <dimen name="headline_button_text_size">25sp</dimen>
+    <dimen name="linear_layout_padding_bottom">20dp</dimen>
 
     <dimen name="credits_text_size">15sp</dimen>
     <dimen name="credits_university_text_size">20sp</dimen>
@@ -19,24 +20,35 @@
     <dimen name="results_column_name_text_size">30sp</dimen>
     <dimen name="results_text_size">20sp</dimen>
     <dimen name="results_margin">20dp</dimen>
+    <dimen name="result_linear_layout_height">444dp</dimen>
+    <dimen name="results_empty_view_padding">20dp</dimen>
+    <dimen name="results_empty_title_text_padding_top">16dp</dimen>
+    <dimen name="results_empty_title_text_size">20sp</dimen>
+    <dimen name="results_empty_subtitle_text_padding_top">8dp</dimen>
+    <dimen name="results_empty_subtitle_text_size">15sp</dimen>
 
     <dimen name="button_text_size">25dp</dimen>
     <dimen name="button_margin_bottom">20dp</dimen>
 
+    <dimen name="list_item_text_size">20dp</dimen>
+    <dimen name="list_item_width">0dp</dimen>
+    <dimen name="list_item_padding">5dp</dimen>
 
-
-    <dimen name="answer_text_size">20sp</dimen>
-    <dimen name="checkbox_padding_botton">10dp</dimen>
-    <dimen name="score_padding">15dp</dimen>
-    <dimen name="score_text_size">25sp</dimen>
-    <dimen name="question_padding">15dp</dimen>
+    <dimen name="answer_text_size">15sp</dimen>
     <dimen name="question_margin_bottom">15dp</dimen>
+    <dimen name="question_padding">15dp</dimen>
     <dimen name="question_text_size">20sp</dimen>
+    <dimen name="button_translate_y">-30dp</dimen>
 
-    <dimen name="linear_layout_padding_bottom">20dp</dimen>
+    <dimen name="checkbox_padding_bottom">10dp</dimen>
+    <dimen name="score_padding">15dp</dimen>
+    <dimen name="score_text_size">20sp</dimen>
     <dimen name="radiogroup_padding_bottom">30dp</dimen>
     <dimen name="radiogroup_padding_top">15dp</dimen>
-    <dimen name="question_button_margin_bottom">100dp</dimen>
+
+
+
+
     <dimen name="final_headline_top_margin">-30dp</dimen>
     <dimen name="final_headline_text_size">40sp</dimen>
     <dimen name="final_message_padding_bottom">15dp</dimen>

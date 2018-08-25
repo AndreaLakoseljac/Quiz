@@ -41,34 +41,36 @@
                     android:id="@+id/question_id"
                     style="@style/QuestionStyle" />
             </LinearLayout>
-
-            <RadioGroup
-                android:id="@+id/radio_group_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="@dimen/question_padding"
-                android:paddingLeft="@dimen/question_padding"
-                android:layout_gravity="center"
-                android:paddingBottom="@dimen/radiogroup_padding_bottom"
-                android:paddingTop="@dimen/radiogroup_padding_top">
-
-                <RadioButton
-                    android:id="@+id/answer1_id"
-                    style="@style/CheckBoxStyle" />
-
-                <RadioButton
-                    android:id="@+id/answer2_id"
-                    style="@style/CheckBoxStyle" />
-
-                <RadioButton
-                    android:id="@+id/answer3_id"
-                    style="@style/CheckBoxStyle" />
-
-                <RadioButton
-                    android:id="@+id/answer4_id"
-                    style="@style/CheckBoxStyle" />
-            </RadioGroup>
         </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/radiogroup_padding_bottom"
+            android:paddingLeft="@dimen/question_padding"
+            android:paddingRight="@dimen/question_padding"
+            android:paddingTop="@dimen/radiogroup_padding_top">
+
+            <RadioButton
+                android:id="@+id/answer1_id"
+                style="@style/CheckBoxStyle" />
+
+            <RadioButton
+                android:id="@+id/answer2_id"
+                style="@style/CheckBoxStyle" />
+
+            <RadioButton
+                android:id="@+id/answer3_id"
+                style="@style/CheckBoxStyle" />
+
+            <RadioButton
+                android:id="@+id/answer4_id"
+                style="@style/CheckBoxStyle" />
+        </RadioGroup>
+
 
         <ImageView
             android:layout_width="wrap_content"
@@ -79,12 +81,12 @@
             android:src="@drawable/book" />
 
         <Button
+            android:id="@+id/submit_button_id"
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/question_button_margin_bottom"
-            android:onClick="submitAnswer"
-            android:text="@string/submit_answer" />
+            android:text="@string/submit_answer"
+            android:translationY="@dimen/button_translate_y" />
     </RelativeLayout>
 </ScrollView>

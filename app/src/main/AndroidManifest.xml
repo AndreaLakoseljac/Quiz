@@ -17,10 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreditsActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".QuestionActivity"></activity>
         <activity
             android:name=".ResultsActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".CreditsActivity"
             android:parentActivityName=".MainActivity"></activity>
         <meta-data
             android:name="preloaded_fonts"
@@ -28,6 +30,10 @@
         <provider
             android:name=".data.ResultProvider"
             android:authorities="com.example.android.results"
+            android:exported="false" />
+        <provider
+            android:name=".data.QuestionProvider"
+            android:authorities="com.example.android.questions"
             android:exported="false" />
     </application>
 

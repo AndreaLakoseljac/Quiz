@@ -1,13 +1,10 @@
 package com.example.android.quiz;
 
-import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
@@ -28,8 +25,6 @@ public class ResultCursorAdapter extends CursorAdapter {
     public void bindView(View view, final Context context, Cursor cursor) {
         TextView nameTextView = (TextView) view.findViewById(R.id.name);
         TextView priceTextView = (TextView) view.findViewById(R.id.score);
-
-        final int bookIdColumnIndex = cursor.getInt(cursor.getColumnIndex(ResultContract.ResultEntry._ID));
 
         int nameColumnIndex = cursor.getColumnIndex(ResultContract.ResultEntry.COLUMN_PLAYER_NAME);
         int scoreColumnIndex = cursor.getColumnIndex(ResultContract.ResultEntry.COLUMN_PLAYER_SCORE);

@@ -7,24 +7,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:padding="@dimen/list_item_padding">
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/list_item_width"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp" />
+            android:textSize="@dimen/list_item_text_size" />
 
         <TextView
             android:id="@+id/score"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/list_item_width"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp" />
+            android:textSize="@dimen/list_item_text_size" />
     </LinearLayout>
 </RelativeLayout>
