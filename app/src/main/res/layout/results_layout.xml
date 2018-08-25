@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -13,13 +12,20 @@
             android:src="@drawable/main1" />
 
         <LinearLayout
-            style="@style/LinearLayoutVertical"
-            android:layout_margin="@dimen/results_margin"
-            android:background="@color/background_color">
+            android:layout_width="match_parent"
+            android:layout_height="444dp"
+            android:layout_marginBottom="@dimen/results_margin"
+            android:layout_marginEnd="@dimen/results_margin"
+            android:layout_marginLeft="@dimen/results_margin"
+            android:layout_marginRight="@dimen/results_margin"
+            android:layout_marginStart="@dimen/results_margin"
+            android:layout_marginTop="@dimen/results_margin"
+            android:background="@color/background_color"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/nazeefa"
                 android:gravity="center"
                 android:text="@string/results_headline"
@@ -57,137 +63,43 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="@dimen/credits_margin"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/empty_view"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Ime" />
+                    android:layout_centerInParent="true"
+                    android:padding="20dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Rezultat" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/empty_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="16dp"
+                        android:text="@string/empty_view_title_text"
+                        android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/credits_margin"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Ime" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Rezultat" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/credits_margin"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Ime" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Rezultat" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/credits_margin"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Ime" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Rezultat" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/credits_margin"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Ime" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/results_text_size"
-                    android:textStyle="bold"
-                    tool:text="Rezultat" />
+                    <TextView
+                        android:id="@+id/empty_subtitle_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/empty_title_text"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="8dp"
+                        android:text="@string/empty_view_subtitle_text"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp" />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

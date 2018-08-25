@@ -20,6 +20,8 @@
     <string name="email_address">mailto:andrea.lakoseljac1@gamil.com</string>
 
     <string name="results_headline">Top rezultati</string>
+    <string name="empty_view_title_text">Još nema rezultata</string>
+    <string name="empty_view_subtitle_text">Započni s igrom kako bi se našao na popisu</string>
 
     <string name="score_textview">Score:</string>
     <string name="submit_answer">Submit</string>

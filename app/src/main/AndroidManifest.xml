@@ -25,6 +25,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <provider
+            android:name=".data.ResultProvider"
+            android:authorities="com.example.android.results"
+            android:exported="false" />
     </application>
 
 </manifest>
