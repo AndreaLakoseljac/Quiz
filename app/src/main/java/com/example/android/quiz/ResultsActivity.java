@@ -35,6 +35,7 @@ public class ResultsActivity extends AppCompatActivity implements
         getLoaderManager().initLoader(RESULT_LOADER, null, this);
     }
 
+
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         String[] projection = {
@@ -50,10 +51,12 @@ public class ResultsActivity extends AppCompatActivity implements
                 "score DESC");
     }
 
+
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
         mCursorAdapter.swapCursor(cursor);
     }
+
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {

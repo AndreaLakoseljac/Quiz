@@ -16,10 +16,12 @@ public class ResultCursorAdapter extends CursorAdapter {
         super(context, c, 0 /* flags */);
     }
 
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
     }
+
 
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {

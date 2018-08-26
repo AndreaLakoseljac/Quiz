@@ -14,16 +14,11 @@ public class QuestionProvider extends ContentProvider {
 
     private QuestionDbHelper mDbHelper;
 
-    public static final String LOG_TAG = QuestionProvider.class.getSimpleName();
-
-    private static final int QUESTIONS = 200;
-
     private static final int QUESTION_ID = 201;
 
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        sUriMatcher.addURI("com.example.android.questions", QuestionContract.PATH_QUESTIONS, QUESTIONS);
         sUriMatcher.addURI("com.example.android.questions", QuestionContract.PATH_QUESTIONS + "/#", QUESTION_ID);
     }
 
@@ -44,10 +39,6 @@ public class QuestionProvider extends ContentProvider {
 
         int match = sUriMatcher.match(uri);
         switch (match) {
-            case QUESTIONS:
-                cursor = database.query(QuestionContract.QuestionEntry.TABLE_NAME, projection, selection, selectionArgs,
-                        null, null, sortOrder);
-                break;
             case QUESTION_ID:
                 selection = QuestionContract.QuestionEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
@@ -66,28 +57,22 @@ public class QuestionProvider extends ContentProvider {
 
 
     @Override
-    public String getType(Uri uri) {
-        final int match = sUriMatcher.match(uri);
-        switch (match) {
-            case QUESTIONS:
-                return QuestionContract.QuestionEntry.CONTENT_LIST_TYPE;
-            case QUESTION_ID:
-                return QuestionContract.QuestionEntry.CONTENT_ITEM_TYPE;
-            default:
-                throw new IllegalStateException("Unknown URI " + uri + " with match " + match);
-        }
+    public String getType(@NonNull Uri uri) {
+        return null;
     }
 
-    @Nullable
+
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
         return null;
     }
 
+
     @Override
     public int delete(@NonNull Uri uri, @Nullable String s, @Nullable String[] strings) {
         return 0;
     }
+
 
     @Override
     public int update(@NonNull Uri uri, @Nullable ContentValues contentValues, @Nullable String s, @Nullable String[] strings) {

@@ -9,9 +9,11 @@ public class ResultDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "kviz.db";
 
+
     public ResultDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -22,15 +24,10 @@ public class ResultDbHelper extends SQLiteOpenHelper {
                 ResultContract.ResultEntry.COLUMN_PLAYER_SCORE + " INTEGER NOT NULL DEFAULT 0);";
 
         db.execSQL(SQL_CREATE_RESULT_TABLE);
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (" + ResultContract.ResultEntry.COLUMN_PLAYER_NAME + ", " + ResultContract.ResultEntry.COLUMN_PLAYER_SCORE + ") VALUES('A', 10);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('q', 20);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('t', 140);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('s', 140);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('f', 1430);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('h', 102);");
-        db.execSQL("INSERT INTO " + ResultContract.ResultEntry.TABLE_NAME + " (name, score) VALUES('o', 102);");
     }
 
+
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) { }
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    }
 }

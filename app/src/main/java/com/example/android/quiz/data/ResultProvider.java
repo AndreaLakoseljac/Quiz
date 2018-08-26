@@ -67,16 +67,8 @@ public class ResultProvider extends ContentProvider {
 
 
     @Override
-    public String getType(Uri uri) {
-        final int match = sUriMatcher.match(uri);
-        switch (match) {
-            case RESULTS:
-                return ResultContract.ResultEntry.CONTENT_LIST_TYPE;
-            case RESULT_ID:
-                return ResultContract.ResultEntry.CONTENT_ITEM_TYPE;
-            default:
-                throw new IllegalStateException("Unknown URI " + uri + " with match " + match);
-        }
+    public String getType( Uri uri) {
+        return null;
     }
 
 

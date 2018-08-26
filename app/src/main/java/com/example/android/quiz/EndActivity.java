@@ -19,7 +19,6 @@ import com.example.android.quiz.data.ResultContract;
 public class EndActivity extends AppCompatActivity {
 
     Integer score;
-    String name;
     EditText nameEditText;
     String mState;
 
@@ -83,11 +82,13 @@ public class EndActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         score = savedInstanceState.getInt(SAVED_INSTANCE_STATE_SCORE);
         nameEditText.setText(SAVED_INSTANCE_STATE_NAME);
     }
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -98,8 +99,11 @@ public class EndActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+    }
+
 
     private void saveResult() {
 
@@ -112,9 +116,9 @@ public class EndActivity extends AppCompatActivity {
         Uri resultUri = getContentResolver().insert(ResultContract.ResultEntry.CONTENT_URI, values);
 
         if (resultUri == null) {
-            Toast.makeText(this,"Rezultat nije spremljen.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Rezultat nije spremljen.", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this,"Rezultat je spremljen.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Rezultat je spremljen.", Toast.LENGTH_SHORT).show();
         }
     }
 }

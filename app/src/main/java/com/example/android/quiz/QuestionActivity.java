@@ -7,9 +7,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -66,7 +64,7 @@ public class QuestionActivity extends AppCompatActivity implements
     static String SAVED_INSTANCE_ID = "id";
     static String SAVED_INSTANCE_ID_LIST = "listId";
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,7 +103,6 @@ public class QuestionActivity extends AppCompatActivity implements
 
         scoreTextViewRadio.setText(String.valueOf(score));
         questionNumberTextViewRadio.setText(String.format(getResources().getString(R.string.question_number), currentQuestion + 1, numberOfQuestions));
-
 
         Button submitButton = (Button) findViewById(R.id.submit_button_id);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +144,7 @@ public class QuestionActivity extends AppCompatActivity implements
         getLoaderManager().initLoader(EXISTING_BOOK_LOADER, null, this);
     }
 
+
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         score = savedInstanceState.getInt(SAVED_INSTANCE_STATE_SCORE);
@@ -161,6 +159,7 @@ public class QuestionActivity extends AppCompatActivity implements
         id = savedInstanceState.getInt(SAVED_INSTANCE_ID);
         listId = savedInstanceState.getIntegerArrayList(SAVED_INSTANCE_ID_LIST);
     }
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -180,9 +179,11 @@ public class QuestionActivity extends AppCompatActivity implements
         super.onSaveInstanceState(outState);
     }
 
+
     @Override
     public void onBackPressed() {
     }
+
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
@@ -202,6 +203,7 @@ public class QuestionActivity extends AppCompatActivity implements
                 null,
                 null);
     }
+
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
@@ -232,6 +234,7 @@ public class QuestionActivity extends AppCompatActivity implements
             answer4RadioButton.setText(answer4);
         }
     }
+
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {

@@ -5,8 +5,6 @@ import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.android.quiz.R;
-
 public class QuestionDbHelper extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
@@ -14,9 +12,11 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
 
     Resources r = Resources.getSystem();
 
+
     public QuestionDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -31,6 +31,7 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
                 QuestionContract.QuestionEntry.COLUMN_ANSWER + " TEXT NOT NULL);";
 
         db.execSQL(SQL_CREATE_QUESTION_TABLE);
+
         db.execSQL("INSERT INTO " + QuestionContract.QuestionEntry.TABLE_NAME + " (question, answer1, answer2, answer3, answer4, answer) VALUES(" +
                 "'Afektivnostilistički postupak koji živi upravo od svog otpora prema takozvanom ustaljenom, pravilnom, gramatičkom redu riječi naziva se', " +
                 "'polisindeton', 'anafora', 'inverzija', 'metafora', 'inverzija');");
@@ -122,6 +123,8 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
                 "'štokavsko-čakavskim', 'čakavsko-kajkavskim', 'kajkavsko-štokavskim', 'kajkavsko-čakavsko-štokavskim', 'štokavsko-čakavskim');");
     }
 
+
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) { }
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    }
 }
