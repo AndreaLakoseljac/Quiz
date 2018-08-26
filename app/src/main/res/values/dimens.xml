@@ -40,7 +40,7 @@
     <dimen name="question_text_size">20sp</dimen>
     <dimen name="button_translate_y">-30dp</dimen>
 
-    <dimen name="checkbox_padding_bottom">10dp</dimen>
+    <dimen name="radiobutton_padding">10dp</dimen>
     <dimen name="score_padding">15dp</dimen>
     <dimen name="score_text_size">20sp</dimen>
     <dimen name="radiogroup_padding_bottom">30dp</dimen>

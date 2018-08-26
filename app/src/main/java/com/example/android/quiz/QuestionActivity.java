@@ -5,11 +5,11 @@ import android.content.ContentUris;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -21,10 +21,6 @@ import android.widget.Toast;
 import com.example.android.quiz.data.QuestionContract;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.Random;
 
 public class QuestionActivity extends AppCompatActivity implements
@@ -70,6 +66,7 @@ public class QuestionActivity extends AppCompatActivity implements
     static String SAVED_INSTANCE_ID = "id";
     static String SAVED_INSTANCE_ID_LIST = "listId";
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +81,7 @@ public class QuestionActivity extends AppCompatActivity implements
         listId = questionIntent.getIntegerArrayListExtra("list");
         score = questionIntent.getIntExtra("score", 0);
 
-        if(currentQuestion == 0){
+        if (currentQuestion == 0) {
             listId = new ArrayList<Integer>();
         }
 
@@ -93,7 +90,7 @@ public class QuestionActivity extends AppCompatActivity implements
             int max = 30;
             Random r = new Random();
             id = r.nextInt(max - min + 1) + min;
-        }while(!listId.isEmpty() && listId.contains(id));
+        } while (!listId.isEmpty() && listId.contains(id));
         listId.add(id);
         currentQuestionUri = ContentUris.withAppendedId(QuestionContract.QuestionEntry.CONTENT_URI, id);
 
@@ -132,7 +129,7 @@ public class QuestionActivity extends AppCompatActivity implements
                     }
 
                     currentQuestion++;
-                    if (currentQuestion == 2) {
+                    if (currentQuestion == 20) {
                         Intent finalIntent = new Intent(QuestionActivity.this, EndActivity.class);
                         finalIntent.putExtra("score", score);
                         startActivity(finalIntent);
@@ -184,7 +181,8 @@ public class QuestionActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+    }
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {

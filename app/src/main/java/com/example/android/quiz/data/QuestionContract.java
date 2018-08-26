@@ -12,8 +12,10 @@ public class QuestionContract {
 
     public static final String PATH_QUESTIONS = "questions";
 
+
     private QuestionContract() {
     }
+
 
     public static final class QuestionEntry implements BaseColumns {
 

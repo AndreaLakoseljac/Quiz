@@ -12,7 +12,10 @@ public class ResultContract {
 
     public static final String PATH_RESULTS = "results";
 
-    private ResultContract() {}
+
+    private ResultContract() {
+    }
+
 
     public static final class ResultEntry implements BaseColumns {
 
@@ -22,7 +25,7 @@ public class ResultContract {
 
         public final static String _ID = BaseColumns._ID;
         public final static String COLUMN_PLAYER_NAME = "name";
-        public final static String COLUMN_PLAYER_SCORE= "score";
+        public final static String COLUMN_PLAYER_SCORE = "score";
 
         public static final String CONTENT_LIST_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_RESULTS;
