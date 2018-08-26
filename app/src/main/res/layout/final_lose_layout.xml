@@ -41,7 +41,7 @@
             style="@style/LinearLayoutVerticalWrapContent"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/question_button_margin_bottom">
+            android:translationY="@dimen/button_translate_y">
 
             <Button
                 style="@style/ButtonStyle"

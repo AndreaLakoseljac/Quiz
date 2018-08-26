@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,12 +20,26 @@ import android.widget.Toast;
 
 import com.example.android.quiz.data.QuestionContract;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Random;
+
 public class QuestionActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int EXISTING_BOOK_LOADER = 0;
+    private ArrayList<Integer> listId;
     Uri currentQuestionUri;
+    String question;
+    String answer1;
+    String answer2;
+    String answer3;
+    String answer4;
     String answer;
+    int id;
     int score;
     int numberOfQuestions = 20;
     int currentQuestion;
@@ -46,6 +61,14 @@ public class QuestionActivity extends AppCompatActivity implements
     static String SAVED_INSTANCE_STATE_SCORE = "score";
     static String SAVED_INSTANCE_STATE_NUMBER_OF_QUESTIONS = "numberOfQuestions";
     static String SAVED_INSTANCE_STATE_CURRENT_QUESTION = "currentValue";
+    static String SAVED_INSTANCE_QUESTION_TEXT = "question";
+    static String SAVED_INSTANCE_ANSWER_1 = "answer1";
+    static String SAVED_INSTANCE_ANSWER_2 = "answer2";
+    static String SAVED_INSTANCE_ANSWER_3 = "answer3";
+    static String SAVED_INSTANCE_ANSWER_4 = "answer4";
+    static String SAVED_INSTANCE_ANSWER = "answer";
+    static String SAVED_INSTANCE_ID = "id";
+    static String SAVED_INSTANCE_ID_LIST = "listId";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +81,20 @@ public class QuestionActivity extends AppCompatActivity implements
 
         Intent questionIntent = getIntent();
         currentQuestion = questionIntent.getIntExtra("currentQuestion", 0);
+        listId = questionIntent.getIntegerArrayListExtra("list");
         score = questionIntent.getIntExtra("score", 0);
 
-        int id = 1;
+        if(currentQuestion == 0){
+            listId = new ArrayList<Integer>();
+        }
+
+        do {
+            int min = 1;
+            int max = 30;
+            Random r = new Random();
+            id = r.nextInt(max - min + 1) + min;
+        }while(!listId.isEmpty() && listId.contains(id));
+        listId.add(id);
         currentQuestionUri = ContentUris.withAppendedId(QuestionContract.QuestionEntry.CONTENT_URI, id);
 
         scoreTextViewRadio = findViewById(R.id.score_id);
@@ -105,6 +139,7 @@ public class QuestionActivity extends AppCompatActivity implements
                     } else {
                         Intent questionIntent = new Intent(QuestionActivity.this, QuestionActivity.class);
                         questionIntent.putExtra("currentQuestion", currentQuestion);
+                        questionIntent.putIntegerArrayListExtra("list", listId);
                         questionIntent.putExtra("score", score);
                         startActivity(questionIntent);
                     }
@@ -121,11 +156,17 @@ public class QuestionActivity extends AppCompatActivity implements
     // The savedInstanceState Bundle is same as the one used in onCreate().
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        TextView button = findViewById(R.id.start_continue_button_id);
-        button.setText(getString(R.string.continue_button));
         score = savedInstanceState.getInt(SAVED_INSTANCE_STATE_SCORE);
         numberOfQuestions = savedInstanceState.getInt(SAVED_INSTANCE_STATE_NUMBER_OF_QUESTIONS);
         currentQuestion = savedInstanceState.getInt(SAVED_INSTANCE_STATE_CURRENT_QUESTION);
+        question = savedInstanceState.getString(SAVED_INSTANCE_STATE_CURRENT_QUESTION);
+        answer1 = savedInstanceState.getString(SAVED_INSTANCE_ANSWER_1);
+        answer2 = savedInstanceState.getString(SAVED_INSTANCE_ANSWER_2);
+        answer3 = savedInstanceState.getString(SAVED_INSTANCE_ANSWER_3);
+        answer4 = savedInstanceState.getString(SAVED_INSTANCE_ANSWER_4);
+        answer = savedInstanceState.getString(SAVED_INSTANCE_ANSWER);
+        id = savedInstanceState.getInt(SAVED_INSTANCE_ID);
+        listId = savedInstanceState.getIntegerArrayList(SAVED_INSTANCE_ID_LIST);
     }
 
     // invoked when the activity may be temporarily destroyed, save the instance state here
@@ -135,6 +176,15 @@ public class QuestionActivity extends AppCompatActivity implements
         outState.putInt(SAVED_INSTANCE_STATE_SCORE, score);
         outState.putInt(SAVED_INSTANCE_STATE_NUMBER_OF_QUESTIONS, numberOfQuestions);
         outState.putInt(SAVED_INSTANCE_STATE_CURRENT_QUESTION, currentQuestion);
+        outState.putString(SAVED_INSTANCE_QUESTION_TEXT, question);
+        outState.putString(SAVED_INSTANCE_ANSWER_1, answer1);
+        outState.putString(SAVED_INSTANCE_ANSWER_2, answer2);
+        outState.putString(SAVED_INSTANCE_ANSWER_3, answer3);
+        outState.putString(SAVED_INSTANCE_ANSWER_4, answer4);
+        outState.putString(SAVED_INSTANCE_ANSWER, answer);
+        outState.putInt(SAVED_INSTANCE_ID, id);
+        outState.putIntegerArrayList(SAVED_INSTANCE_ID_LIST, listId);
+
         // call superclass to save any view hierarchy
         super.onSaveInstanceState(outState);
     }
@@ -196,11 +246,11 @@ public class QuestionActivity extends AppCompatActivity implements
             int answer4ColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER_4);
             int answerColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER);
 
-            String question = cursor.getString(questinColumnIndex);
-            String answer1 = cursor.getString(answer1ColumnIndex);
-            String answer2 = cursor.getString(answer2ColumnIndex);
-            String answer3 = cursor.getString(answer3ColumnIndex);
-            String answer4 = cursor.getString(answer4ColumnIndex);
+            question = cursor.getString(questinColumnIndex);
+            answer1 = cursor.getString(answer1ColumnIndex);
+            answer2 = cursor.getString(answer2ColumnIndex);
+            answer3 = cursor.getString(answer3ColumnIndex);
+            answer4 = cursor.getString(answer4ColumnIndex);
             answer = cursor.getString(answerColumnIndex);
 
             questionTextViewRadio.setText(question);
