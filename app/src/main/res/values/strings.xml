@@ -29,18 +29,13 @@
     <string name="question">Pitanje</string>
     <string name="score_textview">Bodovi:</string>
     <string name="score_on_screen">/</string>
-    <string name="score_message">%1$d/%2$d</string>
     <string name="question_number">Pitanje: %1$d/%2$d</string>
     <string name="positive_toast">Bravo! Točan odgovor!</string>
     <string name="negative_toast">Nažalost, pogrešan odgovor!</string>
     <string name="add_answer_toast">Morate unijeti odgovor!</string>
 
-
-    <string name="final_win_message">You are the real bookworm!</string>
-    <string name="play_again_button">Play again</string>
-    <string name="final_lose_message">Maybe you should read more.</string>
-    <string name="result_message">Your result is </string>
-    <string name="continue_button">Continue</string>
-    <string name="sorry_message">I\'m sorry: %.2f%%</string>
-    <string name="congrats_message">Congrats: %.2f%%</string>
+    <string name="final_message">Vaš rezultat:</string>
+    <string name="result_message">Unesite ime:</string>
+    <string name="final_result_text_size"></string>
+    <string name="first_button">Početak</string>
 </resources>

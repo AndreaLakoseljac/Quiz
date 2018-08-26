@@ -53,7 +53,7 @@
                 android:layout_gravity="center">
 
                 <Button
-                    android:id="@+id/start_continue_button_id"
+                    android:id="@+id/start_button_id"
                     style="@style/ButtonStyle"
                     android:text="@string/start_button"
                     android:textSize="@dimen/headline_button_text_size" />

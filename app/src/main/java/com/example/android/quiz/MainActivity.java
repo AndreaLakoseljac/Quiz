@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button playButton = (Button) findViewById(R.id.start_continue_button_id);
+        Button playButton = (Button) findViewById(R.id.start_button_id);
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.exit(0);
+                finish();
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {}
 }

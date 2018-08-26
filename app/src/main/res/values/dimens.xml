@@ -46,16 +46,13 @@
     <dimen name="radiogroup_padding_bottom">30dp</dimen>
     <dimen name="radiogroup_padding_top">15dp</dimen>
 
-
-
-
-    <dimen name="final_headline_top_margin">-30dp</dimen>
-    <dimen name="final_headline_text_size">40sp</dimen>
-    <dimen name="final_message_padding_bottom">15dp</dimen>
     <dimen name="final_message_text_size">25sp</dimen>
-    <dimen name="edittext_margin_bottom">50dp</dimen>
-    <dimen name="edittext_text_size">22sp</dimen>
+    <dimen name="final_result_text_size">20dp</dimen>
+    <dimen name="final_message_padding">10dp</dimen>
+    <dimen name="final_name_text_size">20sp</dimen>
     <dimen name="trophy_size">200dp</dimen>
     <dimen name="trophy_padding_bottom">40dp</dimen>
     <dimen name="icon_padding">5dp</dimen>
+    <dimen name="final_score_margin">5dp</dimen>
+    <dimen name="final_text_width">0dp</dimen>
 </resources>

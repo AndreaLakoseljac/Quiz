@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/BackgroundImage"
+            android:src="@drawable/library" />
+
+        <ImageView
+            android:id="@+id/image_trophy_id"
+            android:layout_width="@dimen/trophy_size"
+            android:layout_height="@dimen/trophy_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/trophy_padding_bottom"
+            android:src="@drawable/trophy" />
+
+        <LinearLayout
+            style="@style/LinearLayoutVertical"
+            android:layout_margin="@dimen/final_score_margin"
+            android:background="@color/background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/final_message_padding">
+
+                <TextView
+                    android:layout_width="@dimen/final_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/final_message"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/final_message_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/final_score_id"
+                    android:layout_width="@dimen/final_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/final_message_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/final_message_padding">
+
+                <TextView
+                    android:layout_width="@dimen/final_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/result_message"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/final_name_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/name_id"
+                    android:layout_width="@dimen/final_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/final_name_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutVerticalWrapContent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:translationY="@dimen/button_translate_y">
+
+            <Button
+                android:id="@+id/start_button1_id"
+                style="@style/ButtonStyle"
+                android:text="@string/first_button" />
+
+            <Button
+                android:id="@+id/exit_button1_id"
+                style="@style/ButtonStyle"
+                android:text="@string/exit_button" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

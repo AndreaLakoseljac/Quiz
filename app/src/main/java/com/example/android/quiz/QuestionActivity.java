@@ -106,7 +106,7 @@ public class QuestionActivity extends AppCompatActivity implements
         answer3RadioButton = findViewById(R.id.answer3_id);
         answer4RadioButton = findViewById(R.id.answer4_id);
 
-        scoreTextViewRadio.setText(String.format(getResources().getString(R.string.score_message), score, currentQuestion));
+        scoreTextViewRadio.setText(String.valueOf(score));
         questionNumberTextViewRadio.setText(String.format(getResources().getString(R.string.question_number), currentQuestion + 1, numberOfQuestions));
 
 
@@ -132,8 +132,8 @@ public class QuestionActivity extends AppCompatActivity implements
                     }
 
                     currentQuestion++;
-                    if (currentQuestion == 20) {
-                        Intent finalIntent = new Intent(QuestionActivity.this, MainActivity.class);
+                    if (currentQuestion == 2) {
+                        Intent finalIntent = new Intent(QuestionActivity.this, EndActivity.class);
                         finalIntent.putExtra("score", score);
                         startActivity(finalIntent);
                     } else {
@@ -150,10 +150,6 @@ public class QuestionActivity extends AppCompatActivity implements
         getLoaderManager().initLoader(EXISTING_BOOK_LOADER, null, this);
     }
 
-    // This callback is called only when there is a saved instance previously saved using
-    // onSaveInstanceState(). We restore some state in onCreate() while we can optionally restore
-    // other state here, possibly usable after onStart() has completed.
-    // The savedInstanceState Bundle is same as the one used in onCreate().
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         score = savedInstanceState.getInt(SAVED_INSTANCE_STATE_SCORE);
@@ -169,7 +165,6 @@ public class QuestionActivity extends AppCompatActivity implements
         listId = savedInstanceState.getIntegerArrayList(SAVED_INSTANCE_ID_LIST);
     }
 
-    // invoked when the activity may be temporarily destroyed, save the instance state here
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putString(SAVED_INSTANCE_STATE_KEY, mGameState);
@@ -185,32 +180,11 @@ public class QuestionActivity extends AppCompatActivity implements
         outState.putInt(SAVED_INSTANCE_ID, id);
         outState.putIntegerArrayList(SAVED_INSTANCE_ID_LIST, listId);
 
-        // call superclass to save any view hierarchy
         super.onSaveInstanceState(outState);
     }
 
-    public void showTheEnd(View view) {
-        if (score > (numberOfQuestions / 2.0)) {
-            setContentView(R.layout.final_win_layout);
-        } else {
-            setContentView(R.layout.final_lose_layout);
-        }
-        TextView scoreTextView = findViewById(R.id.final_score_id);
-        Resources res = getResources();
-        double percentage = score / (double) numberOfQuestions * 100;
-        if (score > (numberOfQuestions / 2.0)) {
-            scoreTextView.setText(String.format(res.getString(R.string.congrats_message), percentage));
-        } else {
-            scoreTextView.setText(String.format(res.getString(R.string.sorry_message), percentage));
-
-            //(getString(R.string.sorry) + " " + String.format(getString(R.string.round_decimal_to_2_decomals), (score / (double) numberOfQuestions) * 100) + getString(R.string.percent));
-        }
-        String resultMessage = getString(R.string.result_message) + " " + score + getString(R.string.score_on_screen) + numberOfQuestions;
-        toast = Toast.makeText(this, resultMessage, Toast.LENGTH_LONG);
-        toast.show();
-        currentQuestion = 0;
-        score = 0;
-    }
+    @Override
+    public void onBackPressed() {}
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
@@ -239,14 +213,14 @@ public class QuestionActivity extends AppCompatActivity implements
         }
 
         if (cursor.moveToFirst()) {
-            int questinColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_QUESTION_TEXT);
+            int questionColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_QUESTION_TEXT);
             int answer1ColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER_1);
             int answer2ColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER_2);
             int answer3ColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER_3);
             int answer4ColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER_4);
             int answerColumnIndex = cursor.getColumnIndex(QuestionContract.QuestionEntry.COLUMN_ANSWER);
 
-            question = cursor.getString(questinColumnIndex);
+            question = cursor.getString(questionColumnIndex);
             answer1 = cursor.getString(answer1ColumnIndex);
             answer2 = cursor.getString(answer2ColumnIndex);
             answer3 = cursor.getString(answer3ColumnIndex);
